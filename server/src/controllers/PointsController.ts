@@ -37,16 +37,7 @@ class PointsController {
   }
 
   async create(req: Request, res: Response) {
-    const {
-      name,
-      email,
-      whatsapp,
-      latitude,
-      longitude,
-      city,
-      uf,
-      items,
-    } = req.body;
+    const { name, email, whatsapp, latitude, longitude, city, uf, items } = req.body;
 
     const trx = await knex.transaction();
 
