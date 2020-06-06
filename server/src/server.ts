@@ -6,8 +6,8 @@ import routes from './routes';
 
 const app = express();
 
-app.use(json());
 app.use(cors());
+app.use(json());
 app.use(routes);
 
 app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
